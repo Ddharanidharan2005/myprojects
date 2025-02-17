@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>🏠 MANNARGUDI HUB</title>
+   <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+ <section class="header">
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="nav-link">
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="shops.html">SHOPS</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Rajagopalaswamy_Temple,_Mannargudi">ABOUT </a></li>
+                <li><a href="blog.html">BLOG</a></li>
+            </ul>
+        </div>
+          
+    </nav>
+     
+                                                          
+    <div class="preview-container">
+        <button class="btn prev" onclick="prevSlide()">&#10094;</button>
+        <div class="preview-images">
+            <img src="image/temple1.png" alt="Mannargudi Temple">
+            <img src="image/temple2.png" alt="Scenic View">
+            <img src="image/temple3.png" alt="Traditional Houses">
+            <img src="image/temple4.png" alt="festival">
+            <img src="image/temple5.png" alt="tradition">
+            <img src="image/lakes.png" alt="joly">
+            <img src="image/festival.png" alt="temples">
+            <img src="image/temple7.png">
+                    
+        </div>
+        <button class="btn next" onclick="nextSlide()">&#10095;</button>
+    </div>
+     <script>
+let index = 0;
+
+function showSlide() {
+    const slides = document.querySelector('.preview-images');
+    const totalSlides = document.querySelectorAll('.preview-images img').length;  // Total number of images
+    slides.style.transform = `translateX(${-index * 100}%)`;
+}
+
+function prevSlide() {
+    const totalSlides = document.querySelectorAll('.preview-images img').length;
+    index = (index > 0) ? index - 1 : totalSlides - 1;  // Wrap around to last slide
+    showSlide();
+}
+
+function nextSlide() {
+    const totalSlides = document.querySelectorAll('.preview-images img').length;
+    index = (index < totalSlides - 1) ? index + 1 : 0;  // Wrap around to first slide
+    showSlide();
+}
+
+     </script>
+
+     
+     
+     
+     
+     <div class="about"><h1>
+
+**Mannargudi** is a town located in the Thiruvarur district of Tamil Nadu, India. Known for its rich cultural heritage and historical significance, Mannargudi is home to the prominent.</h1>
+ <h1>**Rajagopalaswamy temple**, a renowned Vaishnavite shrine.</h1>
+         
+<h1>The town was founded during the 7th century by the Medieval Cholas and has since been ruled by various dynasties, including the Chola king Rajadhiraja Chola, the Vijayanagar Empire, and the British Empire.</h1>
+         
+         <h1> Mannargudi is also known for its agricultural, metalworking, and weaving industries. The town is well-connected by roadways and railways, with the nearest seaport being Nagapattinam Port and the closest airport being Tiruchirappalli International Airport.
+         </h1>
+     </div>
+    <div class="text-box">
+        <h1>What's about this website</h1>
+        <h1>If you are new to our town, don't worry! You can easily find the shops you are looking for and learn more about our town also.</h1>
+        <a href="https://en.wikipedia.org/wiki/Mannargudi" class="hero-btn">'Visit to explore more'</a>
+    </div>
+      
+
+    <div id="note">Welcome to 'Shop We Info'</div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById("note").style.display = "none";
+            }, 5000);
+        }
+     </script>
+     <div class="footer">
+         <footer>&copy;RIGHTS ARE RESERVED</footer></div>
+ </section>
+   
+ 
+</body>
+    
+</html>
